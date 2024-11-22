@@ -1,3 +1,4 @@
+
 def generar_tablero()-> tuple:
    """
 
@@ -24,10 +25,26 @@ def formar_tablero(tablero: tuple)-> tuple:
    return tablero_final+separador
 
 
+def comprobar_ganador(tablero_final: tuple)-> bool:
+    pass
+
+
+def turno_jugador():
+    pass
+
+
+def jugar():
+    turno = 0
+    while turno < 9 and comprobar_ganador():
+        turno_jugador()
+        turno += 1
+    return turno
+
+
 def main():
    tablero = generar_tablero()
-   print(formar_tablero(tablero))
-
+   tablero_final = formar_tablero(tablero)
+   print(tablero_final)
 
 if __name__ == '__main__':
    main()
